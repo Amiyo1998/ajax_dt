@@ -63,7 +63,7 @@ class EmployeController extends Controller
 		return response()->json($emp);
     }
 
-    public function update(Request $request, $id)
+    public function update(EmployeRequest $request, $id)
     {
         $employe = Employe::find($id);
         $params = $request->only(['name','email','phone','post']);
